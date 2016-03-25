@@ -5,6 +5,6 @@
     <body>
         <h1>Example - Spring Application</h1>
         <p>This is my test.</p>
-        <a href="hello.htm">some action</a>
+        <a href="hello.html">Hillel IT School</a>
     </body>
 </html>
