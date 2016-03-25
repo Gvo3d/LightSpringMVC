@@ -6,7 +6,7 @@
         <!-- the application context definition for the springapp DispatcherServlet -->
         <bean name="/hello.htm" class="springapp.web.HelloController" />
 
-        <bean name="/" class="springapp.web.IndexController" />
+        <bean name="/index.htm" class="springapp.web.IndexController" />
 
         <bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
                 <property name="viewClass"><value>org.springframework.web.servlet.view.JstlView</value></property>
