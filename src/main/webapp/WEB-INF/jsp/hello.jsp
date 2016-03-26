@@ -1,8 +1,10 @@
+<%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
+<!DOCTYPE html>
 <html>
     <head>
         <title>Hello :: Spring Application</title>
         <spring:url value="/resources/simple.css" var="mainCss" />
-                <link href="${mainCss}" rel="stylesheet" type="text/css"/>
+        <link href="${mainCss}" rel="stylesheet" type="text/css"/>
     </head>
     <body>
         <h1>Hello - Spring Application</h1>
