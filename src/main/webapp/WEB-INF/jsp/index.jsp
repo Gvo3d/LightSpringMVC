@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Example :: Spring Application</title>
-        <link href="../css/loginstyle.css" rel="stylesheet" type="text/css">
+        <link href="/WEB-INF/css/index.css" rel="stylesheet" type="text/css">
     </head>
     <body>
         <h1>Example - Spring Application</h1>
