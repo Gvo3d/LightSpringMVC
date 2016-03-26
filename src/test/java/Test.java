@@ -1,6 +1,6 @@
 import org.junit.Assert;
 import org.springframework.web.servlet.ModelAndView;
-import springapp.web.HelloController;
+import springapp.controller.HelloController;
 
 import javax.servlet.ServletException;
 import java.io.IOException;

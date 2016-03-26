@@ -4,7 +4,7 @@
          xsi:schemaLocation="java.sun.com/xml/ns/j2ee
         java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
 
-    <display-name>Spring MVC TEST Application</display-name>
+    <display-name>Hillel TEST Application</display-name>
 
     <servlet>
         <servlet-name>dispatcher</servlet-name>
