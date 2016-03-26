@@ -17,14 +17,20 @@ public class PlaceDAOImpl implements PlaceDAO {
     private SessionFactory sessionFactory;
 
     public void addPlace(Place place) {
-
+        sessionFactory.getCurrentSession().save(place);
     }
 
+    @SuppressWarnings("unchecked")
     public List<Place> listPlace() {
-        return null;
+        return sessionFactory.getCurrentSession().createQuery("from place")
+                .list();
     }
 
     public void removePlace(Integer id) {
-
+        Place place = (Place) sessionFactory.getCurrentSession().load(
+                Place.class, id);
+        if (null != place) {
+            sessionFactory.getCurrentSession().delete(place);
+        }
     }
 }
