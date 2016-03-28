@@ -19,6 +19,7 @@ public class ServletTest {
         Assert.assertEquals("hello",modelAndView.getViewName());
     }
 
+    @org.junit.Test
     public void tesingIndex() throws ServletException, IOException {
         IndexController controller = new IndexController();
         ModelAndView modelAndView = controller.handleRequest(null, null);
