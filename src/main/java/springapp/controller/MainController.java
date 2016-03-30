@@ -36,6 +36,11 @@ public class MainController {
         return "redirect:/index";
     }
 
+    @RequestMapping("/hello")
+    public String hello() {
+        return "redirect:/hello";
+    }
+
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String addPlace(@ModelAttribute("place") Place place,
                              BindingResult result) {

@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/javaee"
+<!--<web-app version="2.5" xmlns="http://java.sun.com/xml/ns/j2ee"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd">-->
 
-    <!--Старая версия шапки
-<web-app version="2.4" xmlns="java.sun.com/xml/ns/j2ee"
-         xmlns:xsi="www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="java.sun.com/xml/ns/j2ee
-        java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">   -->
+   <!-- Старая версия шапки-->
+<web-app version="2.4" xmlns="http://java.sun.com/xml/ns/j2ee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+        http://www.jboss.org/j2ee/schema/web-app_2_4.xsd">
+
 
     <display-name>Hillel TEST Application</display-name>
 
@@ -15,9 +16,7 @@
     <!-- Описание корневого контейнера, разделяемого всеми сервлетами и фильтрами -->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>
-            /WEB-INF/spring-root-context.xml
-        </param-value>
+        <param-value>/WEB-INF/spring/spring-root-context.xml</param-value>
     </context-param>
 
     <!-- Создаёт контейнер Spring, разделяемый всеми сервлетами и фильтрами -->
@@ -27,18 +26,18 @@
 
 
     <servlet>
-        <servlet-name>dispatcher</servlet-name>
+        <servlet-name>appServlet</servlet-name>
         <servlet-class>org.springframework.web.servlet.DispatcherServlet</servlet-class>
+        <init-param>
+            <param-name>contextConfigLocation</param-name>
+            <param-value>/WEB-INF/spring/appServlet/dispatcher-servlet.xml</param-value>
+        </init-param>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
-        <servlet-name>dispatcher</servlet-name>
-        <url-pattern>*.html</url-pattern>
+        <servlet-name>appServlet</servlet-name>
+        <url-pattern>/</url-pattern>
     </servlet-mapping>
-
-    <welcome-file-list>
-        <welcome-file>jsp/redirect.jsp</welcome-file>
-    </welcome-file-list>
 
     <!-- Фильтр для перекодировки в utf8 -->
     <filter>

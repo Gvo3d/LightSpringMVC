@@ -9,10 +9,6 @@
 
     <!-- Определяем папку, в которой будем искать веб компоненты (контроллеры)-->
 
-    <bean name="/hello.html" class="springapp.controller.HelloController" />
-
-    <bean name="/index.html" class="springapp.controller.IndexController" />
-
     <context:component-scan base-package="springapp.controller" />
 
 </beans>

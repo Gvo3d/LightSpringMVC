@@ -3,7 +3,7 @@
 <html>
     <head>
         <title>Hello :: Spring Application</title>
-        <spring:url value="/resources/simple.css" var="mainCss" />
+        <spring:url value="/res/simple.css" var="mainCss" />
         <link href="${mainCss}" rel="stylesheet" type="text/css"/>
     </head>
     <body>

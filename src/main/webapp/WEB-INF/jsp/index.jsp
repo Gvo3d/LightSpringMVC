@@ -3,8 +3,8 @@
 <html>
     <head>
         <title>Example :: Spring Application</title>
-        <spring:url value="/resources/simple.css" var="mainCss" />
-        <spring:url value="/resources/indexPage/index.gif" var="mainGif" />
+        <spring:url value="/res/simple.css" var="mainCss" />
+        <spring:url value="/res/indexPage/index.gif" var="mainGif" />
         <link href="${mainCss}" rel="stylesheet" type="text/css"/>
     </head>
     <body>

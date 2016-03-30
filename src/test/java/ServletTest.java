@@ -1,18 +1,10 @@
-import org.junit.Assert;
-import org.springframework.web.servlet.ModelAndView;
-import springapp.controller.HelloController;
-import springapp.controller.IndexController;
-
-import javax.servlet.ServletException;
-import java.io.IOException;
-
 /**
  * Created by Gvozd on 25.03.2016.
  */
 
 public class ServletTest {
 
-    @org.junit.Test
+   /** @org.junit.Test
     public void tesingHello() throws ServletException, IOException {
         HelloController controller = new HelloController();
         ModelAndView modelAndView = controller.handleRequest(null, null);
@@ -25,4 +17,5 @@ public class ServletTest {
         ModelAndView modelAndView = controller.handleRequest(null, null);
         Assert.assertEquals("index",modelAndView.getViewName());
     }
+    */
 }
