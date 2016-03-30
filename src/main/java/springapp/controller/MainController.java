@@ -26,7 +26,7 @@ public class MainController {
     public String listContacts(Map<String, Object> map) {
 
         map.put("place", new Place());
-        map.put("placetList", PlaceService.listPlace());
+        map.put("placeList", placeService.listPlace());
 
         return "places";
     }
