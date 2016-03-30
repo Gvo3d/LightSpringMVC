@@ -20,7 +20,7 @@ public class Place {
     @Column(name = "description")
     private String description;
 
-    @Column(name = "adress")
+    @Column(name = "address")
     private String address;
 
     @Column(name = "telephone")
