@@ -14,7 +14,7 @@
 
         <!-- the application context definition for the springapp DispatcherServlet -->
 
-        <resources mapping="/resources/**" location="/resources/" />
+        <resources mapping="/res/**" location="/res/" />
 
         <beans:bean id="viewResolver" class="org.springframework.web.servlet.view.InternalResourceViewResolver">
                 <beans:property name="viewClass"><beans:value>org.springframework.web.servlet.view.JstlView</beans:value></beans:property>
