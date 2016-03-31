@@ -22,8 +22,7 @@ public class PlaceDAOImpl implements PlaceDAO {
 
     @SuppressWarnings("unchecked")
     public List<Place> listPlace() {
-        return sessionFactory.getCurrentSession().createQuery("from place")
-                .list();
+        return sessionFactory.getCurrentSession().createQuery("from Place").list();
     }
 
     public void removePlace(Integer id) {
