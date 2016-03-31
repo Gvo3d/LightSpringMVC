@@ -21,22 +21,22 @@
 
 	<table>
 		<tr>
-			<td><form:label path="firstname">
-				<spring:message code="label.firstname" />
+			<td><form:label path="placename">
+				<spring:message code="label.placename" />
 			</form:label></td>
-			<td><form:input path="firstname" /></td>
+			<td><form:input path="placename" /></td>
 		</tr>
 		<tr>
-			<td><form:label path="lastname">
-				<spring:message code="label.lastname" />
+			<td><form:label path="description">
+				<spring:message code="label.description" />
 			</form:label></td>
-			<td><form:input path="lastname" /></td>
+			<td><form:input path="description" /></td>
 		</tr>
 		<tr>
-			<td><form:label path="email">
-				<spring:message code="label.email" />
+			<td><form:label path="address">
+				<spring:message code="label.address" />
 			</form:label></td>
-			<td><form:input path="email" /></td>
+			<td><form:input path="address" /></td>
 		</tr>
 		<tr>
 			<td><form:label path="telephone">
@@ -46,24 +46,25 @@
 		</tr>
 		<tr>
 			<td colspan="2"><input type="submit"
-				value="<spring:message code="label.addcontact"/>" /></td>
+				value="<spring:message code="label.addplace"/>" /></td>
 		</tr>
 	</table>
 </form:form>
 
-<h3><spring:message code="label.contacts" /></h3>
-<c:if test="${!empty contactList}">
+<h3><spring:message code="label.places" /></h3>
+<c:if test="${!empty placeList}">
 	<table class="data">
 		<tr>
-			<th><spring:message code="label.firstname" /></th>
-			<th><spring:message code="label.email" /></th>
+			<th><spring:message code="label.placename" /></th>
+			<th><spring:message code="label.address" /></th>
 			<th><spring:message code="label.telephone" /></th>
 			<th>&nbsp;</th>
 		</tr>
-		<c:forEach items="${contactList}" var="places">
+		<c:forEach items="${placeList}" var="places">
 			<tr>
-				<td>${place.lastname}, ${place.firstname}</td>
-				<td>${place.email}</td>
+				<td>${place.placename}</td>
+				<td>${place.description}</td>
+				<td>${place.address}</td>
 				<td>${place.telephone}</td>
 				<td><a href="delete/${place.id}"><spring:message code="label.delete" /></a></td>
 			</tr>
