@@ -32,13 +32,18 @@ public class MainController {
     }
 
     @RequestMapping("/")
-    public String home() {
+    public String homeSlash() {
         return "redirect:/index";
     }
 
-    @RequestMapping("/hello")
+    @RequestMapping("/index.html")
+    public String home() {
+        return "index";
+    }
+
+    @RequestMapping("/hello.htm")
     public String hello() {
-        return "redirect:/hello";
+        return "hello";
     }
 
     @RequestMapping(value = "/add", method = RequestMethod.POST)
@@ -47,7 +52,7 @@ public class MainController {
 
         placeService.addPlace(place);
 
-        return "redirect:/places";
+        return "redirect:/list";
     }
 
     @RequestMapping("/delete/{placetId}")
@@ -55,6 +60,6 @@ public class MainController {
 
         placeService.removePlace(placeId);
 
-        return "redirect:/places";
+        return "redirect:/list";
     }
 }

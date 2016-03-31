@@ -36,7 +36,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>appServlet</servlet-name>
-        <url-pattern>/</url-pattern>
+        <url-pattern>/WEB-INF/jsp/*</url-pattern>
     </servlet-mapping>
 
     <!-- Фильтр для перекодировки в utf8 -->
