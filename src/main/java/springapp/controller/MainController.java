@@ -4,6 +4,8 @@ package springapp.controller;
  * Created by Gvozd on 29.03.2016.
  */
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.validation.BindingResult;
@@ -18,6 +20,11 @@ import java.util.Map;
 
 @Controller
 public class MainController {
+
+    public MainController() {
+        final Log logger = LogFactory.getLog(getClass());
+        logger.info("Returning index view");
+    }
 
     @Autowired
     private PlaceService placeService;
@@ -36,12 +43,12 @@ public class MainController {
         return "redirect:/index";
     }
 
-    @RequestMapping("/index.html")
+    @RequestMapping("/index")
     public String home() {
-        return "index";
+        return "redirect:/index";
     }
 
-    @RequestMapping("/hello.htm")
+    @RequestMapping("/hello")
     public String hello() {
         return "hello";
     }

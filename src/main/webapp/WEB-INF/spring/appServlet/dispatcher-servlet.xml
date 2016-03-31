@@ -11,7 +11,7 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-
+        <beans:import resource="controllers.xml" />
         <!-- the application context definition for the springapp DispatcherServlet -->
 
         <resources mapping="/res/**" location="/res/" />
@@ -22,6 +22,6 @@
                 <beans:property name="suffix"><beans:value>.jsp</beans:value></beans:property>
         </beans:bean>
 
-        <beans:import resource="controllers.xml" />
+
 
 </beans:beans>
