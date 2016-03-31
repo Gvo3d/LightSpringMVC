@@ -30,7 +30,7 @@ public class MainController {
     private PlaceService placeService;
 
     @RequestMapping("/list")
-    public String listContacts(Map<String, Object> map) {
+    public String listPlaces(Map<String, Object> map) {
 
         map.put("place", new Place());
         map.put("placeList", placeService.listPlace());

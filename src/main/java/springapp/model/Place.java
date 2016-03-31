@@ -6,24 +6,24 @@ import javax.persistence.*;
  * Created by Gvozd on 26.03.2016.
  */
 @Entity
-@Table(name = "place")
+@Table(name = "PLACE")
 public class Place {
 
     @Id
-    @Column(name = "id")
+    @Column(name = "ID")
     @GeneratedValue
     private Integer id;
 
-    @Column(name = "placename")
+    @Column(name = "PLACENAME")
     private String placename;
 
-    @Column(name = "description")
+    @Column(name = "DESCRIPTION")
     private String description;
 
-    @Column(name = "address")
+    @Column(name = "ADDRESS")
     private String address;
 
-    @Column(name = "telephone")
+    @Column(name = "TELEPHONE")
     private String telephone;
 
     public Integer getId() {
