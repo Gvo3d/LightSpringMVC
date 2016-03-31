@@ -17,7 +17,7 @@
 
 <h2><spring:message code="label.title" /></h2>
 
-<form:form method="post" action="add" commandName="contact">
+<form:form method="post" action="add" commandName="place">
 
 	<table>
 		<tr>
@@ -60,12 +60,12 @@
 			<th><spring:message code="label.telephone" /></th>
 			<th>&nbsp;</th>
 		</tr>
-		<c:forEach items="${contactList}" var="contact">
+		<c:forEach items="${contactList}" var="places">
 			<tr>
-				<td>${contact.lastname}, ${contact.firstname}</td>
-				<td>${contact.email}</td>
-				<td>${contact.telephone}</td>
-				<td><a href="delete/${contact.id}"><spring:message code="label.delete" /></a></td>
+				<td>${place.lastname}, ${place.firstname}</td>
+				<td>${place.email}</td>
+				<td>${place.telephone}</td>
+				<td><a href="delete/${place.id}"><spring:message code="label.delete" /></a></td>
 			</tr>
 		</c:forEach>
 	</table>

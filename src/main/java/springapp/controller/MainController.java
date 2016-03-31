@@ -45,7 +45,7 @@ public class MainController {
 
     @RequestMapping("/index")
     public String home() {
-        return "redirect:/index";
+        return "index";
     }
 
     @RequestMapping("/hello")
