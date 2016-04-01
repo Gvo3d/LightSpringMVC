@@ -10,11 +10,13 @@
         <link href="${mainCss}" rel="stylesheet" type="text/css"/>
     </head>
     <body>
+    <div class="contentblock">
         <h1>Example - Spring Application</h1>
         <p>This is my test.</p>
         <a href="hello.html">Hillel IT School</a>
         <br>
         <img src="${mainGif}" alt="MY HUGE DIIIICK!" style="float:center;width:350px;height:350px;">
+        </div>
     </body>
 <%@include file="/WEB-INF/jsp/includes/standartFooter.jsp" %>
 </html>

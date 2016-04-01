@@ -14,4 +14,5 @@
 <br>
 <a href="list.html">Hillel IT School</a>
     </body>
+    <%@include file="/WEB-INF/jsp/includes/standartFooter.jsp" %>
 </html>

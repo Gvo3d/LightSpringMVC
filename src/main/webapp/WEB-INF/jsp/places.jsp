@@ -73,4 +73,5 @@
 </c:if>
 
 </body>
+<%@include file="/WEB-INF/jsp/includes/standartFooter.jsp" %>
 </html>
