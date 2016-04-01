@@ -17,40 +17,6 @@
 
 <h2><spring:message code="label.title" /></h2>
 
-<form:form method="post" action="add" commandName="place">
-
-	<table>
-		<tr>
-			<td><form:label path="placename">
-				<spring:message code="label.placename" />
-			</form:label></td>
-			<td><form:input path="placename" /></td>
-		</tr>
-		<tr>
-			<td><form:label path="description">
-				<spring:message code="label.description" />
-			</form:label></td>
-			<td><form:input path="description" /></td>
-		</tr>
-		<tr>
-			<td><form:label path="address">
-				<spring:message code="label.address" />
-			</form:label></td>
-			<td><form:input path="address" /></td>
-		</tr>
-		<tr>
-			<td><form:label path="telephone">
-				<spring:message code="label.telephone" />
-			</form:label></td>
-			<td><form:input path="telephone" /></td>
-		</tr>
-		<tr>
-			<td colspan="2"><input type="submit"
-				value="<spring:message code="label.addplace"/>" /></td>
-		</tr>
-	</table>
-</form:form>
-
 <h3><spring:message code="label.places" /></h3>
 <c:if test="${!empty placeList}">
 	<table class="data">

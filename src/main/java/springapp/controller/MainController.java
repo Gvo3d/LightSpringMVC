@@ -31,8 +31,6 @@ public class MainController {
 
     @RequestMapping("/list")
     public String listPlaces(Map<String, Object> map) {
-
-        map.put("place", new Place());
         map.put("placeList", placeService.listPlace());
 
         return "places";
