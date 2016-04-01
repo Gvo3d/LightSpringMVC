@@ -1,3 +1,5 @@
+<%@ page language="java" contentType="text/html; charset=utf8"
+	pageEncoding="utf8"%>
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 <!DOCTYPE html>
 <html>
@@ -14,4 +16,5 @@
         <br>
         <img src="${mainGif}" alt="MY HUGE DIIIICK!" style="float:center;width:350px;height:350px;">
     </body>
+<%@include file="/WEB-INF/jsp/includes/standartFooter.jsp" %>
 </html>
