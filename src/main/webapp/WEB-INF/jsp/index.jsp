@@ -4,6 +4,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+    <meta charset="utf-8">
         <title>Example :: Spring Application</title>
         <spring:url value="/res/simple.css" var="mainCss" />
         <spring:url value="/res/indexPage/index.gif" var="mainGif" />
