@@ -1,0 +1,23 @@
+<html>
+<body>
+<%
+java.util.Calendar currTime = new java.util.GregorianCalendar();
+
+String timeOfDay = "";
+
+if (currTime.get(currTime.HOUR_OF_DAY) < 12)
+{
+timeOfDay = "Morning!";
+}
+else if (currTime.get(currTime.HOUR_OF_DAY) < 18)
+{
+timeOfDay = "Afternoon!";
+}
+else
+{
+timeOfDay = "Evening!";
+}
+%>
+Good <% out.write(timeOfDay); %>
+</body>
+</html>
