@@ -56,9 +56,15 @@ public class MainController {
         return "adding";
     }
 
-    @RequestMapping(value = "/add", method = RequestMethod.POST)
-    public String addNewPlace(@ModelAttribute("place") Place place,
-                             BindingResult result) {
+    @RequestMapping("/adding2")
+    public String adding2() {
+        Place place = new Place();
+        return "adding";
+    }
+
+    @RequestMapping(value = "/adding2Handler", method = RequestMethod.POST)
+    public String addPlace2(@ModelAttribute("place") Place place,
+                           BindingResult result) {
 
         placeService.addPlace(place);
 
@@ -67,7 +73,7 @@ public class MainController {
 
     @RequestMapping(value = "/addingHandler", method = RequestMethod.GET)
     public String addPlaceHandler(@ModelAttribute("place") Place place,
-                           BindingResult result) {
+                                  BindingResult result) {
 
         placeService.addPlace(place);
 

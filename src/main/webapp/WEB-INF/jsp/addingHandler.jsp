@@ -25,6 +25,7 @@ newPlace.setDescription(newPlaceDescription);
 newPlace.setAddress(newPlaceAddress);
 newPlace.setTelephone(newPlaceTelephone);
 placeService.addPlace(newPlace);
+newPlace = null;
 %>
 
 <% response.sendRedirect("list.html"); %>

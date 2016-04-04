@@ -1,4 +1,5 @@
-<%@ page language="java" pageEncoding="utf-8"%>
+<%@ page language="java" contentType="text/html; charset=utf8"
+	pageEncoding="utf8"%>
 <%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <%@taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
@@ -15,7 +16,7 @@
 </a>
 
 <h2><spring:message code="label.title" /></h2>
-<form:form method="post" action="add" modelAttribute="place">
+<form:form method="post" action="adding2Handler" commandName="place">
 
 	<table>
 		<tr>
