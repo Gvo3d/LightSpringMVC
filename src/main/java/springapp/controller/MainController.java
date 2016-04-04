@@ -51,6 +51,11 @@ public class MainController {
         return "hello";
     }
 
+    @RequestMapping("/adding")
+    public String adding() {
+        return "adding";
+    }
+
     @RequestMapping(value = "/add", method = RequestMethod.POST)
     public String addPlace(@ModelAttribute("place") Place place,
                              BindingResult result) {
