@@ -4,7 +4,7 @@
 <html>
     <head>
     <meta charset="utf-8">
-        <title>Hello :: Spring Application</title>
+        <title><spring:message code="label.title" /></title>
         <spring:url value="/res/simple.css" var="mainCss" />
         <link href="${mainCss}" rel="stylesheet" type="text/css"/>
     </head>

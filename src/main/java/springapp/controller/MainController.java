@@ -60,7 +60,7 @@ public class MainController {
         return "redirect:/list";
     }
 
-    @RequestMapping("/delete/{placetId}")
+    @RequestMapping("/delete/{placeId}")
     public String deletePlace(@PathVariable("placeId") Integer placeId) {
 
         placeService.removePlace(placeId);
