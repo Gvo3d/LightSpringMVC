@@ -23,7 +23,7 @@ public class MainController {
 
     public MainController() {
         final Log logger = LogFactory.getLog(getClass());
-        logger.info("Returning index view");
+        logger.info("MainControllerLoaded");
     }
 
     @Autowired
@@ -53,27 +53,13 @@ public class MainController {
 
     @RequestMapping("/adding")
     public String adding() {
-        return "adding";
-    }
-
-    @RequestMapping("/adding2")
-    public String adding2() {
         Place place = new Place();
         return "adding";
     }
 
     @RequestMapping(value = "/adding2Handler", method = RequestMethod.POST)
-    public String addPlace2(@ModelAttribute("place") Place place,
+    public String addingPlace(@ModelAttribute("place") Place place,
                            BindingResult result) {
-
-        placeService.addPlace(place);
-
-        return "redirect:/list";
-    }
-
-    @RequestMapping(value = "/addingHandler", method = RequestMethod.GET)
-    public String addPlaceHandler(@ModelAttribute("place") Place place,
-                                  BindingResult result) {
 
         placeService.addPlace(place);
 

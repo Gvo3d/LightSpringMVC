@@ -16,7 +16,6 @@
 <br>
 <a href="list.html"><spring:message code="label.menu" /></a>
 <a href="adding.html"><spring:message code="label.addplace" /></a>
-<a href="adding2.html"><spring:message code="label.addplace" /></a>
     </body>
     <%@include file="/WEB-INF/jsp/includes/standartFooter.jsp" %>
 </html>

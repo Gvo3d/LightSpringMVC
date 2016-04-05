@@ -16,6 +16,10 @@ public class PlaceDAOImpl implements PlaceDAO {
     @Autowired
     private SessionFactory sessionFactory;
 
+    public PlaceDAOImpl() {
+
+    }
+
     public void addPlace(Place place) {
         sessionFactory.getCurrentSession().save(place);
     }
