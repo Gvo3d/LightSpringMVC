@@ -16,27 +16,25 @@
 
 <h2><spring:message code="label.title" /></h2>
 
-<h3><spring:message code="label.places" /></h3>
-<c:if test="${!empty placeList}">
-	<table class="data">
+<% if (searchplace.id!=null) { %>
+	<table class="placedata">
 		<tr>
 			<th><spring:message code="label.placeNameId" /></th>
-			<th><spring:message code="label.description" /></th>
+			<th><spring:message code="label.adescription" /></th>
 			<th><spring:message code="label.address" /></th>
 			<th><spring:message code="label.telephone" /></th>
 			<th>&nbsp;</th>
 		</tr>
-		<c:forEach items="${placeList}" var="place">
+
 			<tr>
-				<td><a href="select/${place.id}">${place.placename}</a></td>
-				<td>${place.description}</td>
-				<td>${place.address}</td>
-				<td>${place.telephone}</td>
+				<td><%= request.getParameter("searchplace.placename")%></td>
+				<td><%= request.getParameter("searchplace.description")%></td>
+				<td><%= request.getParameter("searchplace.address")%></td>
+				<td><%= request.getParameter("searchplace.telephone")%></td>
 				<td><a href="delete/${place.id}"><spring:message code="label.delete" /></a></td>
 			</tr>
-		</c:forEach>
 	</table>
-</c:if>
+<% } %>
 
 </body>
 <%@include file="/WEB-INF/jsp/includes/standartFooter.jsp" %>

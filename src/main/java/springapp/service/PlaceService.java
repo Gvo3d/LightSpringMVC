@@ -13,4 +13,6 @@ public interface PlaceService {
     public List<Place> listPlace();
 
     public void removePlace(Integer id);
+
+    public Place getPlace(Integer id);
 }

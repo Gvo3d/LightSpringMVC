@@ -36,4 +36,10 @@ public class PlaceDAOImpl implements PlaceDAO {
             sessionFactory.getCurrentSession().delete(place);
         }
     }
+
+    public Place getPlace(Integer id){
+        Place place = (Place) sessionFactory.getCurrentSession().load(
+                Place.class, id);
+        return place;
+    }
 }

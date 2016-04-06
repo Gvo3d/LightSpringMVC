@@ -20,6 +20,7 @@ import java.util.Map;
 
 @Controller
 public class MainController {
+    Place searchplace;
 
     public MainController() {
         final Log logger = LogFactory.getLog(getClass());
@@ -64,6 +65,14 @@ public class MainController {
         placeService.addPlace(place);
 
         return "redirect:/list";
+    }
+
+    @RequestMapping(value = "/select/{placeId}")
+    public String selectPlace(@PathVariable("placeId") Integer placeId) {
+
+        searchplace = placeService.getPlace(placeId);
+
+        return "place";
     }
 
     @RequestMapping("/delete/{placeId}")
