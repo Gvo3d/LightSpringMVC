@@ -21,9 +21,9 @@ import java.util.Map;
 @Controller
 public class MainController {
     Place searchplace;
+    final Log logger = LogFactory.getLog(getClass());
 
     public MainController() {
-        final Log logger = LogFactory.getLog(getClass());
         logger.info("MainControllerLoaded");
     }
 
@@ -71,6 +71,7 @@ public class MainController {
     public String selectPlace(@PathVariable("placeId") Integer placeId) {
 
         searchplace = placeService.getPlace(placeId);
+        logger.info(searchplace.getPlacename()+" in maincontroller - loaded!");
 
         return "place";
     }

@@ -1,5 +1,7 @@
 package springapp.service;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -12,6 +14,7 @@ import java.util.List;
  */
 @Service
 public class PlaceServiceImpl implements PlaceService {
+    final Log logger = LogFactory.getLog(getClass());
 
     @Autowired
     private PlaceDAO placeDAO;
@@ -33,6 +36,7 @@ public class PlaceServiceImpl implements PlaceService {
 
     @Transactional
     public Place getPlace(Integer id) {
+        logger.info("service impl - place traded to controller!");
         return placeDAO.getPlace(id);
     }
 }

@@ -1,5 +1,7 @@
 package springapp.dao;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -12,6 +14,7 @@ import java.util.List;
  */
 @Repository
 public class PlaceDAOImpl implements PlaceDAO {
+    final Log logger = LogFactory.getLog(getClass());
 
     @Autowired
     private SessionFactory sessionFactory;
@@ -40,6 +43,8 @@ public class PlaceDAOImpl implements PlaceDAO {
     public Place getPlace(Integer id){
         Place place = (Place) sessionFactory.getCurrentSession().load(
                 Place.class, id);
+
+        logger.info(place.getPlacename()+" in DAO - loaded!");
         return place;
     }
 }

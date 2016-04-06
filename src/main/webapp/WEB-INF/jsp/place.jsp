@@ -16,7 +16,7 @@
 
 <h2><spring:message code="label.title" /></h2>
 
-<% if (searchplace.id!=null) { %>
+
 	<table class="placedata">
 		<tr>
 			<th><spring:message code="label.placeNameId" /></th>
@@ -27,14 +27,13 @@
 		</tr>
 
 			<tr>
-				<td><%= request.getParameter("searchplace.placename")%></td>
-				<td><%= request.getParameter("searchplace.description")%></td>
-				<td><%= request.getParameter("searchplace.address")%></td>
-				<td><%= request.getParameter("searchplace.telephone")%></td>
+				<td><%= searchplace.placename %></td>
+				<td><%= searchplace.description %></td>
+				<td><%= searchplace.address %></td>
+				<td><%= searchplace.telephone %></td>
 				<td><a href="delete/${place.id}"><spring:message code="label.delete" /></a></td>
 			</tr>
 	</table>
-<% } %>
 
 </body>
 <%@include file="/WEB-INF/jsp/includes/standartFooter.jsp" %>
