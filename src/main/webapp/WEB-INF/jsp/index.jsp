@@ -13,7 +13,7 @@
     <body>
     <div class="contentblock">
         <h1>Example - Spring Application</h1>
-        <h2><%@include file="/WEB-INF/jsp/includes/greeting.html" %><h2>
+        <h2><%@include file="/WEB-INF/jsp/includes/greeting.jsp" %><h2>
         <a href="hello.html">Hillel IT School</a>
         <br>
         <img src="${mainGif}" alt="MY HUGE DIIIICK!" style="float:center;width:350px;height:350px;">
