@@ -20,7 +20,6 @@ import java.util.Map;
 
 @Controller
 public class MainController {
-    Place searchplace;
     final Log logger = LogFactory.getLog(getClass());
 
     public MainController() {
@@ -68,11 +67,10 @@ public class MainController {
     }
 
     @RequestMapping(value = "/select/{placeId}")
-    public String selectPlace(@PathVariable("placeId") Integer placeId) {
-
-        searchplace = placeService.getPlace(placeId);
-        logger.info(searchplace.getPlacename()+" in maincontroller - loaded!");
-
+    public String selectPlace(@PathVariable("placeId") Integer placeId, Map<String, Object> map) {
+        Place place = placeService.getPlace(placeId);
+        logger.info(place.getPlacename()+" in maincontroller - loaded!");
+        map.put("searchable", place);
         return "place";
     }
 

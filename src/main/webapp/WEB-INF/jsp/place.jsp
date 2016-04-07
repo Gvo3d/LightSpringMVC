@@ -16,24 +16,28 @@
 
 <h2><spring:message code="label.title" /></h2>
 
-
+<c:if test="${(searchable!=null)}">
 	<table class="placedata">
+	<c:set var="place" value="${searchable}" scope="page" />
 		<tr>
-			<th><spring:message code="label.placeNameId" /></th>
-			<th><spring:message code="label.adescription" /></th>
-			<th><spring:message code="label.address" /></th>
-			<th><spring:message code="label.telephone" /></th>
-			<th>&nbsp;</th>
+			<td><spring:message code="label.placeNameId" /></td>
+			<td>${place.placename}</td>
+			<td>&nbsp;</td>
 		</tr>
-
-			<tr>
-				<td><%= searchplace.placename %></td>
-				<td><%= searchplace.description %></td>
-				<td><%= searchplace.address %></td>
-				<td><%= searchplace.telephone %></td>
-				<td><a href="delete/${place.id}"><spring:message code="label.delete" /></a></td>
-			</tr>
+		<tr>
+			<td><spring:message code="label.description" /></td>
+			<td>${place.description}</td>
+		</tr>
+		<tr>
+            <td><spring:message code="label.address" /></td>
+            <td>${place.address}</td>
+        </tr>
+        <tr>
+            <td><spring:message code="label.telephone" /></td>
+			<td>${place.telephone}</td>
+		</tr>
 	</table>
+</c:if>
 
 </body>
 <%@include file="/WEB-INF/jsp/includes/standartFooter.jsp" %>
