@@ -3,6 +3,7 @@ package springapp.dao;
 import springapp.model.Place;
 
 import java.util.List;
+
 /**
  * Created by Gvozd on 26.03.2016.
  */

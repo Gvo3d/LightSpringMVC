@@ -40,14 +40,14 @@ public class PlaceDAOImpl implements PlaceDAO {
         }
     }
 
-    public Place getPlace(Integer id){
+    public Place getPlace(Integer id) {
         Place resultplace = new Place();
         try {
             resultplace = (Place) sessionFactory.getCurrentSession().load(Place.class, id);
         } catch (Exception e) {
             resultplace = null;
         }
-        logger.info(resultplace.getPlacename()+" in DAO - loaded!");
+        logger.info(resultplace.getPlacename() + " in DAO - loaded!");
         return resultplace;
     }
 }

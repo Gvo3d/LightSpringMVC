@@ -59,7 +59,7 @@ public class MainController {
 
     @RequestMapping(value = "/adding2Handler", method = RequestMethod.POST)
     public String addingPlace(@ModelAttribute("place") Place place,
-                           BindingResult result) {
+                              BindingResult result) {
 
         placeService.addPlace(place);
 
@@ -69,7 +69,7 @@ public class MainController {
     @RequestMapping(value = "/select/{placeId}")
     public String selectPlace(@PathVariable("placeId") Integer placeId, Map<String, Object> map) {
         Place place = placeService.getPlace(placeId);
-        logger.info(place.getPlacename()+" in maincontroller - loaded!");
+        logger.info(place.getPlacename() + " in maincontroller - loaded!");
         map.put("searchable", place);
         return "place";
     }
