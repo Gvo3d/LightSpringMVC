@@ -10,11 +10,6 @@
 </head>
 <body>
 
-<%final Log logger = LogFactory.getLog(getClass());
-logger.info(searchplace.getPlacename);
-
-%>
-
 <a href="<c:url value="/logout" />">
 	<spring:message code="label.logout" />
 </a>

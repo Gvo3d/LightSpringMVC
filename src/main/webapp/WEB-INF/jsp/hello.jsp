@@ -17,7 +17,6 @@
 <a href="list.html"><spring:message code="label.menu" /></a>
 <a href="adding.html"><spring:message code="label.addplace" /></a>
 <a href="searching.html"><spring:message code="label.search" /></a>
-<a href="select/5"><spring:message code="label.places" /></a>
     </body>
     <%@include file="/WEB-INF/jsp/includes/standartFooter.jsp" %>
 </html>
