@@ -19,13 +19,10 @@
     <context:annotation-config />
 
     <!-- Определяем папки, в которых будем автоматически искать бины-компоненты (@Component, @Service)  -->
-    <context:component-scan base-package="springapp.dao" />
-    <context:component-scan base-package="springapp.service" />
 
     <!-- Файл с настройками ресурсов для работы с данными (Data Access Resources) -->
-    <import resource="data.xml" />
 
     <!-- Файл с настройками безопасности -->
-    <import resource="security.xml" />
+    <!--<import resource="security.xml" />-->
 
 </beans>

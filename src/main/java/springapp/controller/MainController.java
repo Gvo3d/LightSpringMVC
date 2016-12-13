@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import springapp.model.Place;
-import springapp.service.PlaceService;
 
 import java.util.Map;
 
@@ -24,16 +22,6 @@ public class MainController {
 
     public MainController() {
         logger.info("MainControllerLoaded");
-    }
-
-    @Autowired
-    private PlaceService placeService;
-
-    @RequestMapping("/list")
-    public String listPlaces(Map<String, Object> map) {
-        map.put("placeList", placeService.listPlace());
-
-        return "places";
     }
 
     @RequestMapping("/")
@@ -46,39 +34,4 @@ public class MainController {
         return "index";
     }
 
-    @RequestMapping("/hello")
-    public String hello() {
-        return "hello";
-    }
-
-    @RequestMapping("/adding")
-    public String adding() {
-        Place place = new Place();
-        return "adding";
-    }
-
-    @RequestMapping(value = "/adding2Handler", method = RequestMethod.POST)
-    public String addingPlace(@ModelAttribute("place") Place place,
-                              BindingResult result) {
-
-        placeService.addPlace(place);
-
-        return "redirect:/list";
-    }
-
-    @RequestMapping(value = "/select/{placeId}")
-    public String selectPlace(@PathVariable("placeId") Integer placeId, Map<String, Object> map) {
-        Place place = placeService.getPlace(placeId);
-        logger.info(place.getPlacename() + " in maincontroller - loaded!");
-        map.put("searchable", place);
-        return "place";
-    }
-
-    @RequestMapping("/delete/{placeId}")
-    public String deletePlace(@PathVariable("placeId") Integer placeId) {
-
-        placeService.removePlace(placeId);
-
-        return "redirect:/list";
-    }
 }
